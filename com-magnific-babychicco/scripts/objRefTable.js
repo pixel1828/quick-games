@@ -386,7 +386,6 @@ self.C3_JsPropNameTable = [
 	{var_life: 0},
 	{obj_turtle: 0},
 	{bullet_spike: 0},
-	{forÃ§a: 0},
 	{projetil2: 0},
 	{stop: 0},
 	{esquilo: 0},
