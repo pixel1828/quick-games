@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PEEP And The Big Wide World: Flower Power</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
 
+        #game {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+    // 1. Removes "About Ruffle", "Save Manager", and all Ruffle items from right-click
+    "contextMenu": "none", 
+    
+    // 2. Kills the branded loading screen
+    "splashScreen": false,
+    
+    // 3. Blocks Ruffle-branded popups if an older SWF file has unsupported features
+    "warnOnUnsupportedContent": false 
+};
+
+    </script>
+    <embed
+        id="game"
+        src="flowerpower_10KB.swf"
+        type="application/x-shockwave-flash">
+</body>
+</html>
