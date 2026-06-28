@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RATS! (Web Source Port)</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+</style>
+</head>
+<body>
+
+<canvas id="game"></canvas>
+
+<script>
+const GAME_WIDTH = 640;   // 32 × 20px
+const GAME_HEIGHT = 640;
+
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+// Disable blurry scaling
+ctx.imageSmoothingEnabled = false;
+
+function resize() {
+
+    const scale = Math.floor(
+        Math.min(
+            window.innerWidth / GAME_WIDTH,
+            window.innerHeight / GAME_HEIGHT
+        )
+    ) || 1;
+
+    canvas.width = GAME_WIDTH;
+    canvas.height = GAME_HEIGHT;
+
+    canvas.style.width = (GAME_WIDTH * scale) + "px";
+    canvas.style.height = (GAME_HEIGHT * scale) + "px";
+
+    canvas.style.position = "absolute";
+    canvas.style.left = ((window.innerWidth - GAME_WIDTH * scale) / 2) + "px";
+    canvas.style.top = ((window.innerHeight - GAME_HEIGHT * scale) / 2) + "px";
+}
+
+window.addEventListener("resize", resize);
+resize();
+
+let lastTime = 0;
+
+function update(dt) {
+    // Game logic goes here.
+}
+
+function draw() {
+
+    // Background
+    ctx.fillStyle = "#808080";
+    ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+
+    // Temporary grid so we know everything lines up.
+    ctx.strokeStyle = "#666";
+
+    for (let x = 0; x <= 32; x++) {
+        ctx.beginPath();
+        ctx.moveTo(x * 20, 0);
+        ctx.lineTo(x * 20, 640);
+        ctx.stroke();
+    }
+
+    for (let y = 0; y <= 32; y++) {
+        ctx.beginPath();
+        ctx.moveTo(0, y * 20);
+        ctx.lineTo(640, y * 20);
+        ctx.stroke();
+    }
+}
+
+function loop(time) {
+
+    const dt = (time - lastTime) / 1000;
+    lastTime = time;
+
+    update(dt);
+    draw();
+
+    requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
+</script>
+
+</body>
+</html>
