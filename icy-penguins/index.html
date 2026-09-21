@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Icy Penguin</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+#gameContainer {
+    width: 100vw;
+    height: 100vh;
+}
+</style>
+
+<!-- Original CrazyGames Unity loader 
+<script src="https://files.crazygames.com/unityloaders/UnityLoader-v3.js"></script>-->
+<script src="Unity/UnityLoader-v3.js"></script>
+
+<!-- Fake CrazyGames SDK -->
+<script>
+/*window.CrazyGames = {
+    SDK: {
+
+        init: async function() {
+            console.log("Fake SDK init");
+        },
+
+        game: {
+
+            gameplayStart: function() {
+                console.log("gameplayStart");
+            },
+
+            gameplayStop: function() {
+                console.log("gameplayStop");
+            },
+
+            happytime: function() {
+                console.log("happytime");
+            }
+        },
+
+        ad: {
+
+            requestAd: function(type, callbacks) {
+
+                console.log("Fake ad:", type);
+
+                if (callbacks && callbacks.adFinished) {
+                    callbacks.adFinished();
+                }
+            }
+        },
+
+        data: {
+
+            getItem: function(key) {
+                return null;
+            },
+
+            setItem: function(key, value) {
+                console.log("save", key, value);
+            }
+        }
+    }
+};*/
+</script>
+
+</head>
+
+<body>
+
+<div id="gameContainer"></div>
+
+<script>
+UnityLoader.instantiate(
+    "gameContainer",
+    "Build/Build.json"
+);
+</script>
+
+</body>
+</html>
