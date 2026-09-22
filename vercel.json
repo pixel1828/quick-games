@@ -1,28 +1,35 @@
 {
-  "routes": [
+  "headers": [
     {
-      "src": "/(.*)\\.wasm\\.unityweb",
-      "headers": {
-        "Content-Type": "application/wasm",
-        "Content-Encoding": "gzip"
-      },
-      "dest": "/$1.wasm.unityweb"
+      "source": "/(.*)\\.wasm\\.unityweb",
+      "headers": [
+        { "key": "Content-Type", "value": "application/wasm" },
+        { "key": "Content-Encoding", "value": "gzip" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
     },
     {
-      "src": "/(.*)\\.js\\.unityweb",
-      "headers": {
-        "Content-Type": "application/javascript",
-        "Content-Encoding": "gzip"
-      },
-      "dest": "/$1.js.unityweb"
+      "source": "/(.*)\\.js\\.unityweb",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" },
+        { "key": "Content-Encoding", "value": "gzip" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
     },
     {
-      "src": "/(.*)\\.data\\.unityweb",
-      "headers": {
-        "Content-Type": "application/octet-stream",
-        "Content-Encoding": "gzip"
-      },
-      "dest": "/$1.data.unityweb"
+      "source": "/(.*)\\.data\\.unityweb",
+      "headers": [
+        { "key": "Content-Type", "value": "application/octet-stream" },
+        { "key": "Content-Encoding", "value": "gzip" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
+      ]
     }
   ]
 }
