@@ -1,0 +1,14 @@
+{
+"companyName": "azgames.io",
+"productName": "Temple Run 2",
+"productVersion": "1.0",
+"dataUrl": "temple-run-publish.data.unityweb",
+"wasmCodeUrl": "temple-run-publish.wasm.unityweb",
+"frameworkUrl": "temple-run-publish.framework.js.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000",
+"developmentBuild": false,
+"multithreading": false
+}
