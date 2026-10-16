@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Super Mario Bros. S</title>
+    <title>Unity WebGL Player | Super Mario Bros. S</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/smbs-temp.loader.js";
+      var loaderUrl = buildUrl + "/SMBS-v021-WebGL.loader.js";
       var config = {
-        dataUrl: buildUrl + "/smbs-temp.data",
-        frameworkUrl: buildUrl + "/smbs-temp.framework.js",
-        codeUrl: buildUrl + "/smbs-temp.wasm",
+        dataUrl: buildUrl + "/SMBS-v021-WebGL.data",
+        frameworkUrl: buildUrl + "/SMBS-v021-WebGL.framework.js",
+        codeUrl: buildUrl + "/SMBS-v021-WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "superpi2",
         productName: "Super Mario Bros. S",
@@ -97,7 +97,7 @@
         canvas.style.height = "576px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/smbs-temp.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/SMBS-v021-WebGL.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");

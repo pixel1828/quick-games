@@ -1,0 +1,15 @@
+{
+        "dataUrl": "Build/SpaceKiller.data.unityweb",
+        "wasmFrameworkUrl": "Build/SpaceKiller.wasm.framework.unityweb",
+        "codeUrl": "Build/SpaceKiller.wasm.code.unityweb",
+        "streamingAssetsUrl": "StreamingAssets",
+        "companyName": "popup",
+        "productName": "Imposter Battle Royale",
+        "productVersion": "2019.4.28f1c1",
+        "showBanner": "unityShowBanner",
+        "progressLogoUrl": "../TemplateData/unity-logo-dark.png",
+        "progressEmptyUrl": "../TemplateData/progress-bar-empty-dark.png",
+        "progressFullUrl": "../TemplateData/progress-bar-full-dark.png",
+        "graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+        "multithreading": false
+}
