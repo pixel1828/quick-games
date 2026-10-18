@@ -1,7 +1,7 @@
 {
         "dataUrl": "Build/SpaceKiller.data.unityweb",
         "wasmFrameworkUrl": "Build/SpaceKiller.wasm.framework.unityweb",
-        "codeUrl": "Build/SpaceKiller.wasm.code.unityweb",
+        "asmCodeUrl": "Build/SpaceKiller.wasm.code.unityweb",
         "streamingAssetsUrl": "StreamingAssets",
         "companyName": "popup",
         "productName": "Imposter Battle Royale",
