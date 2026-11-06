@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width:100%;height:100%;max-width:100%">
+            <div id="game"></div>
+        </div>
+        <script>
+            EJS_player = "#game";
+            EJS_core = "melonds";
+            EJS_gameName = "wildworld";
+            EJS_color = "#0064ff";
+            EJS_pathtodata = "./dat/";
+            EJS_gameUrl = "./dat/WUP-N-DAYE.nds";
+            EJS_biosUrl = "./dat/bios.zip";
+            //EJS_core = "desmume";
+            EJS_defaultOptions = {
+              "fps": "show",
+              "shader": "bicubic",
+              "webgl2Enabled": "enabled"
+            };
+        </script>
+        <script src="./dat/loader.js"></script>
+    </body>
+</html>
